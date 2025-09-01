@@ -91,7 +91,7 @@ We include scripts for evaluating all of our baselines. To evaluate the baseline
 
 ## Synthetic Data Generation
 
-We provide the script for generating the synthetically rendered motion-blurred images. To run this, you will need to download [ScanNet++](https://kaldir.vc.in.tum.de/scannetpp), which will require submitting an application. You will also need to follow the installation instructions for [RIFE](https://github.com/hzwer/ECCV2022-RIFE) and [PromptDA](https://github.com/DepthAnything/PromptDA). Then, run `synth_data_gen.py` with the config `synth_data_gen_cfg.yaml`. This will generate a CSV file with the paths to load the motion-blurred images, flows, depths, as well as the relative camera pose across the image.
+We provide the script for generating the synthetically rendered motion-blurred images. To run this, download [ScanNet++](https://kaldir.vc.in.tum.de/scannetpp), which requires submitting an application. You will also need to follow the installation instructions for [RIFE](https://github.com/hzwer/ECCV2022-RIFE) and [PromptDA](https://github.com/DepthAnything/PromptDA). Then, run `synth_data_gen.py` with the config `synth_data_gen_cfg.yaml`. This will generate a CSV file with the paths to load the motion-blurred images, flows, depths, as well as the relative camera pose across the image.
 
 ## Training
 
