@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "image-as-an-imu"
+version = "0.1.0"
+description = "Project for estimating camera motion from motion blurred images"
+authors = [{ name = "Jerred Chen", email = "jerred.chen@cs.ox.ac.uk" }]
+dependencies = ["torch>=2.6"]
+
+[tool.setuptools]
+packages = ["iaai"]

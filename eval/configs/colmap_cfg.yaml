@@ -1,0 +1,10 @@
+data_path: # Required path to sequence directory
+precomputed_vels_path:
+save_suffix:
+save_vels: False
+viz_time_series: True
+
+retrieval_conf: netvlad
+feature_conf: disk
+matcher_conf: disk+lightglue
+overwrite_colmap_outputs: False

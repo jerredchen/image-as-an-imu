@@ -1,0 +1,10 @@
+SYNTH_DATA_PATH: # Path to where the synthetic data will be saved
+SCANNETPP_DATA_PATH: # Path to the ScanNet++ data/ directory
+RIFE_MODEL_PATH: # Path to directory where RIFE checkpoint is saved (likely train_log/)
+SPLITS: [train, val]
+DATA:
+  HEIGHT: 252
+  WIDTH: 336
+FRAME_NUM_SKIP: 10 # Gap between keyframes to average between, 10 is good for synthesizing large blur
+START_ITER: 0
+LOAD_DATASET: # If you're resuming from a previous run, you can load a dataset from a csv or pkl file

@@ -1,0 +1,70 @@
+# Basic settings
+SEED: 0
+RUN_NAME:
+DEBUG: false
+
+# Model configuration
+MODEL:
+  TYPE: mscan # Only supports mscan for now
+  ENCODER:
+    WEIGHTS: # Path to the pretrained mscan_b.pth weights
+  POSE_HEAD:
+    SUPERVISE: false
+    USE_PINV: false
+    CUT_BORDERS: true
+
+# Training configuration
+TRAINING:
+  BATCH_SIZE: 32
+  NUM_WORKERS: 4
+  EPOCHS: 20
+  OPTIMIZER: adamw # Options: adam, adamw
+  LR: 1e-5
+  LR_SCHEDULER:
+    TYPE: none  # Options: "onecycle", "none"
+    # OneCycleLR specific parameters
+    MAX_LR: 1e-4  # Maximum learning rate for OneCycleLR
+    PCT_START: 0.3  # Percentage of cycle spent increasing LR (default: 30%)
+    ANNEAL_STRATEGY: cos  # "cos" or "linear"
+    CYCLE_MOMENTUM: true  # Whether to cycle momentum inversely to LR
+    BASE_MOMENTUM: 0.85  # Lower momentum bound for cycling
+    MAX_MOMENTUM: 0.95  # Upper momentum bound for cycling
+    DIV_FACTOR: 25.0  # Initial LR = MAX_LR / DIV_FACTOR
+    FINAL_DIV_FACTOR: 10000.0  # Final LR = INITIAL_LR / FINAL_DIV_FACTOR
+    THREE_PHASE: false  # If True, use three phase schedule
+
+  MIXED_PRECISION: bf16
+  ROT_LOSS_WEIGHT: 1.0
+  TRANS_LOSS_WEIGHT: 10.0
+  POSE_LOSS_WEIGHT: 1000.0
+  FLOW_LOSS_WEIGHT: 1e-4
+  DEPTH_LOSS_WEIGHT: 1e-3
+  POSE_ONLY: false
+  USE_PSEUDO_GT: false
+
+  VAL_FIRST: false  # Whether to run validation before training starts
+  VAL_INTERVAL: 1  # How often to run validation (in epochs)
+
+  CHECKPOINT:
+    SAVE: true
+    RESUME_PATH:
+    DIR: # Path to the directory to save checkpoints
+    INTERVAL: 5  # How often to save checkpoints (in epochs)
+    OVERWRITE: false  # Whether to overwrite existing checkpoints
+
+# Dataset configuration
+DATASET:
+  TRAIN_DATA: # Path to the training data csv file
+  VAL_DATA: # Path to the validation data csv file
+  HEIGHT: 252
+  WIDTH: 336
+  CENTERCROP_DIMS: [224, 320]
+  DATA_AUGMENT:
+    - color_transforms
+    - noise_transforms
+
+# Logging configuration
+LOGGING:
+  PLATFORM: wandb # Options: wandb, null
+  STEPS_PER_PRINT: 10  # How often to print training progress
+  TRAIN_VISUALS_INTERVAL: 1000  # How often to log training visuals, in steps

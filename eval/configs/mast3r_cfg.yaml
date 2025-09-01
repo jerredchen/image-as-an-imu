@@ -1,0 +1,7 @@
+data_path: # Required path to sequence directory
+precomputed_vels_path:
+save_suffix:
+save_vels: False
+viz_metrics: True
+
+mast3r_ckpt_name: naver/MASt3R_ViTLarge_BaseDecoder_512_catmlpdpt_metric

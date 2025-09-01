@@ -1,0 +1,8 @@
+data_path: # Required path to sequence directory
+precomputed_vels_path:
+save_suffix:
+save_vels: False
+viz_time_series: False
+
+ckpt_path: # Required to load model checkpoint from
+oracle_direction: False

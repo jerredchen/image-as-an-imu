@@ -1,0 +1,23 @@
+# Path to the data directory
+DATA_PATH:
+
+# Visualization options
+PLOT_POSES: false
+PLOT_IMU: false
+PLOT_VELS: false
+
+# Frame extraction and processing
+EXTRACT_FRAMES: true
+
+# Image processing parameters
+RESIZE: [336, 252]  # Width, Height. Set to 0 to skip resizing
+CROP: [320, 224]    # Width, Height. Set to 0 to skip cropping
+RGB_SUFFIX: _320x224  # Suffix for processed images directory (e.g., "_processed")
+
+# Blur detection, mainly for creating finetuning data
+BLURRY_DETECT:
+    ENABLED: false
+    USE_SUFFIX: _320x224
+    METHOD: fft # Options: fft, laplacian
+    THRESHOLD: 6.3
+    VIZ: false

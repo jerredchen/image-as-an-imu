@@ -1,0 +1,11 @@
+# Debug-specific configurations
+LOGGING:
+  STEPS_PER_PRINT: 1
+  PLATFORM: null
+
+TRAINING:
+  BATCH_SIZE: 8
+  NUM_WORKERS: 0
+  EPOCHS: 2
+  CHECKPOINT:
+    SAVE: False

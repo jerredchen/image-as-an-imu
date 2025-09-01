@@ -1,0 +1,7 @@
+data_path: # Required path to sequence directory
+precomputed_vels_path:
+save_suffix:
+save_vels: False
+viz_metrics: True
+
+droid_output_dir: /path/to/DROID-SLAM/reconstructions/

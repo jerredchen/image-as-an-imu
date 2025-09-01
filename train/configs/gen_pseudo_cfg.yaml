@@ -1,0 +1,21 @@
+################## DO NOT CHANGE ##################
+# These configs are for the MotionBlurredDataset
+TRAINING:
+  POSE_ONLY: true
+  USE_PSEUDO_GT: false
+MODEL:
+  POSE_HEAD:
+    SUPERVISE: true
+##################################################
+  
+CHECKPOINT_PATH: # path to model checkpoint to predict pseudo ground truth labels
+
+# Dataset configuration
+DATASET:
+  CSV_OG_PATH: # path to the original csv file with finetuning data
+  CSV_SAVE_PATH: # where to save the csv file, including pseudo ground truth labels
+  LABELS_SAVE_DIR: # where to save the pseudo ground truth labels themselves
+  HEIGHT: 224  # Image height
+  WIDTH: 320   # Image width
+  CENTERCROP_DIMS: null
+  DATA_AUGMENT: []
