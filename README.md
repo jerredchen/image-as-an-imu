@@ -2,7 +2,7 @@
 
 ![teaser](./assets/teaser.png)
 
-Official implementation of *Image as an IMU: Estimating Camera Motion from a Single Motion-Blurred Image*.
+Official implementation of *Image as an IMU: Estimating Camera Motion from a Single Motion-Blurred Image*, ICCV 2025 (Oral).
 
 [[arXiv](https://arxiv.org/abs/2503.17358)] [[Webpage](https://jerredchen.github.io/image-as-imu/)]
 
@@ -21,7 +21,7 @@ Official implementation of *Image as an IMU: Estimating Camera Motion from a Sin
 
 ## Getting Started
 
-First, create a new conda environmen◊t.
+First, create a new conda environment.
 ```bash
 conda create -n image-as-imu python=3.10
 conda activate image-as-imu
