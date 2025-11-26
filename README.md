@@ -19,6 +19,10 @@ Official implementation of *Image as an IMU: Estimating Camera Motion from a Sin
 }
 ```
 
+## News
+
+- **[Nov 26 2025]** We've released the real-world finetuning dataset, which can be accessed [here](https://huggingface.co/datasets/jerredchen00/image-as-an-imu-finetuning).
+
 ## Getting Started
 
 First, create a new conda environment.
@@ -109,4 +113,4 @@ We provide the hyperparameters that we use for all three stages in separate file
 - [x] Release the evaluation code
 - [x] Release the training code
 - [x] Release the synthetic data generation code
-- [ ] Release the real-world finetuning dataset
+- [x] Release the real-world finetuning dataset
